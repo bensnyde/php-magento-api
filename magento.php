@@ -473,7 +473,7 @@ class Magento
                                 return false;
 
                         $temp = array();
-                        $temp['productId'] = $productID;
+                        $temp['productId'] = $productId;
                         $temp['productIdentifierType'] = $productIdentifierType;
 
                         return $this->mQuery("catalog_product.delete", $temp);
@@ -628,7 +628,7 @@ class Magento
                 public function productAttribute_update($attributeID, Array $data)
                 {
                         $temp = array();
-                        $temp['attribute'] = $attribute;
+                        $temp['attribute'] = $attributeID;
                         $temp['data'] = $data;
 
                         return $this->mQuery("product_attribute.update", $temp);
@@ -1098,8 +1098,8 @@ class Magento
                                 return false;
 
                         $temp = array();
-                        $temp['productId'] = $productId;
-                        $temp['resource'] = $resouce;
+                        $temp['productId'] = $productID;
+                        $temp['resource'] = $resource;
                         $temp['resourceType'] = $resourceType;
                         $temp['identifierType'] = $identifierType;
                         $temp['store'] = $storeID;
@@ -1275,10 +1275,10 @@ class Magento
          * Allows you to retrieve the list of custom options for a specific product
          *
          * @access      public
-         * @param       string product id, *string store view id
+         * @param       string option id, *string store view id
          * @return      array catalogProductCustomOptionList
         */
-                public function productCustomOption_list($productID, $storeID = null)
+                public function productCustomOption_list($optionID, $storeID = null)
                 {
                         $temp = array();
                         $temp['optionId'] = $optionID;
@@ -2092,7 +2092,7 @@ class Magento
                 public function salesOrderShipment_addComment($shipmentIncrementID, $comment = null, $email = null, $includeInEmail = null)
                 {
                         $temp = array();
-                        $temp['shipmentIncrementId'] = $shipmentIncrementId;
+                        $temp['shipmentIncrementId'] = $shipmentIncrementID;
                         $temp['email'] = $email;
                         $temp['includeInEmail'] = $includeInEmail;
                         $temp['comment'] = $comment;
